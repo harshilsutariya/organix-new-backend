@@ -12,7 +12,8 @@ import CropTypeRoute from "./routes/croptype/CropTypeRoute";
 import fertilizerRoute from "./routes/fertilizer/FertilizerRoute";
 import cropItemRoute from "./routes/cropitem/CropItemRoute";
 import TalukaController from "./routes/taluka/TalukaRoute"
-
+import distributionPointRoute from "./routes/DistributionPoint/DistributionPointRoute"
+import villageRoute from "./routes/village/VillageRoute"
 // connectDB
 
 // error handler
@@ -32,6 +33,8 @@ app.use("/cropType", CropTypeRoute);
 app.use("/fertilizerType", fertilizerRoute);
 app.use("/cropItem", cropItemRoute);
 app.use("/taluka", TalukaController);
+app.use("/distributionPoint", distributionPointRoute);
+app.use("/village", villageRoute);
 app.use(errorHandlerMiddleware);
 app.use(notFoundMiddleware);
 const port = process.env.PORT || 3000;
